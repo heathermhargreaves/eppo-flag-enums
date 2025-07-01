@@ -1,0 +1,28 @@
+{
+  "name": "eppo-enum-generator",
+  "version": "1.0.0",
+  "description": "Generate JavaScript enums from Eppo feature flag configuration files",
+  "main": "generate-eppo-enums.js",
+  "bin": {
+    "generate-eppo-enums": "./generate-eppo-enums.js"
+  },
+  "scripts": {
+    "generate": "node generate-eppo-enums.js",
+    "test": "node generate-eppo-enums.js sample-eppo-config.json",
+    "demo": "npm run test && cat eppo-flags.js",
+    "fetch": "node generate-eppo-enums.js --api",
+    "help": "node generate-eppo-enums.js --help"
+  },
+  "keywords": [
+    "eppo",
+    "feature-flags",
+    "enum",
+    "generator",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+} 

@@ -1,0 +1,75 @@
+{
+  "createdAt": "2024-01-01T12:00:00.000Z",
+  "format": "SERVER",
+  "environment": {
+    "name": "Production"
+  },
+  "flags": {
+    "welcome-message": {
+      "key": "welcome-message",
+      "enabled": true,
+      "variationType": "STRING",
+      "variations": {
+        "control": {
+          "key": "control",
+          "value": "Welcome!"
+        },
+        "personalized": {
+          "key": "personalized", 
+          "value": "Welcome back!"
+        }
+      }
+    },
+    "dark-mode": {
+      "key": "dark-mode",
+      "enabled": true,
+      "variationType": "BOOLEAN",
+      "variations": {
+        "enabled": {
+          "key": "enabled",
+          "value": true
+        },
+        "disabled": {
+          "key": "disabled",
+          "value": false
+        }
+      }
+    },
+    "api-config": {
+      "key": "api-config",
+      "enabled": true,
+      "variationType": "JSON",
+      "variations": {
+        "v1": {
+          "key": "v1",
+          "value": {
+            "version": "1.0",
+            "endpoint": "/api/v1"
+          }
+        },
+        "v2": {
+          "key": "v2", 
+          "value": {
+            "version": "2.0",
+            "endpoint": "/api/v2"
+          }
+        }
+      }
+    },
+    "max-upload-size": {
+      "key": "max-upload-size",
+      "enabled": true,
+      "variationType": "NUMBER",
+      "variations": {
+        "small": {
+          "key": "small",
+          "value": 5
+        },
+        "large": {
+          "key": "large",
+          "value": 50
+        }
+      }
+    }
+  }
+} 
