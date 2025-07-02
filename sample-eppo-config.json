@@ -1,13 +1,6 @@
 {
-  "createdAt": "2024-01-01T12:00:00.000Z",
-  "format": "SERVER",
-  "environment": {
-    "name": "Production"
-  },
   "flags": {
-    "welcome-message": {
-      "key": "welcome-message",
-      "enabled": true,
+    "add-profile-picture-nudge": {
       "variationType": "STRING",
       "variations": {
         "control": {
@@ -20,9 +13,7 @@
         }
       }
     },
-    "dark-mode": {
-      "key": "dark-mode",
-      "enabled": true,
+    "show-welcome-banner": {
       "variationType": "BOOLEAN",
       "variations": {
         "enabled": {
@@ -35,39 +26,37 @@
         }
       }
     },
-    "api-config": {
-      "key": "api-config",
-      "enabled": true,
-      "variationType": "JSON",
-      "variations": {
-        "v1": {
-          "key": "v1",
-          "value": {
-            "version": "1.0",
-            "endpoint": "/api/v1"
-          }
-        },
-        "v2": {
-          "key": "v2", 
-          "value": {
-            "version": "2.0",
-            "endpoint": "/api/v2"
-          }
-        }
-      }
-    },
     "max-upload-size": {
-      "key": "max-upload-size",
-      "enabled": true,
       "variationType": "NUMBER",
       "variations": {
         "small": {
           "key": "small",
-          "value": 5
+          "value": 10
         },
         "large": {
           "key": "large",
-          "value": 50
+          "value": 25
+        }
+      }
+    },
+    "homepage-config": {
+      "variationType": "JSON",
+      "variations": {
+        "default": {
+          "key": "default",
+          "value": {
+            "title": "Welcome!",
+            "theme": "light",
+            "showBanner": true
+          }
+        },
+        "personalized": {
+          "key": "personalized",
+          "value": {
+            "title": "Welcome back!",
+            "theme": "dark", 
+            "showBanner": false
+          }
         }
       }
     }

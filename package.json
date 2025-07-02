@@ -1,28 +1,36 @@
 {
   "name": "eppo-enum-generator",
   "version": "1.0.0",
-  "description": "Generate JavaScript enums from Eppo feature flag configuration files",
-  "main": "generate-eppo-enums.js",
+  "description": "Generate TypeScript enums from Eppo feature flag configuration files",
+  "main": "generate-eppo-enums.ts",
   "bin": {
-    "generate-eppo-enums": "./generate-eppo-enums.js"
+    "generate-eppo-enums": "./generate-eppo-enums.ts"
   },
   "scripts": {
-    "generate": "node generate-eppo-enums.js",
-    "test": "node generate-eppo-enums.js sample-eppo-config.json",
-    "demo": "npm run test && cat eppo-flags.js",
-    "fetch": "node generate-eppo-enums.js --api",
-    "help": "node generate-eppo-enums.js --help"
+    "generate": "npx tsx generate-eppo-enums.ts",
+    "test": "npx tsx generate-eppo-enums.ts sample-eppo-config.json",
+    "demo": "npm run test && cat eppo-flags.ts",
+    "fetch": "npx tsx generate-eppo-enums.ts --api",
+    "help": "npx tsx generate-eppo-enums.ts --help",
+    "build": "tsc generate-eppo-enums.ts",
+    "dev": "npx tsx generate-eppo-enums.ts"
   },
   "keywords": [
     "eppo",
     "feature-flags",
     "enum",
     "generator",
+    "typescript",
     "javascript"
   ],
   "author": "",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
   }
 } 
